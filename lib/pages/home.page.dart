@@ -13,6 +13,22 @@ class HomePage extends StatelessWidget {
               height: 60,
             ),
             search(),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              "Categories",
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              height: 90,
+              child: categoryList(),
+            ),
           ],
         ),
       ),
@@ -55,5 +71,47 @@ Widget search() {
         ),
       ],
     ),
+  );
+}
+
+Widget categoryList() {
+  return Container(
+    child: ListView(
+      scrollDirection: Axis.horizontal,
+      children: <Widget>[
+        categoryItem(),
+        categoryItem(),
+        categoryItem(),
+        categoryItem(),
+        categoryItem(),
+        categoryItem(),
+        categoryItem(),
+        categoryItem(),
+      ],
+    ),
+  );
+}
+
+Widget categoryItem() {
+  return Container(
+    width: 70,
+    height: 70,
+    margin: EdgeInsets.all(10),
+    padding: EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      boxShadow: [
+        new BoxShadow(
+          color: Colors.black12,
+          offset: new Offset(1, 1),
+          blurRadius: 5,
+          spreadRadius: 2,
+        ),
+      ],
+      borderRadius: BorderRadius.all(
+        Radius.circular(64),
+      ),
+    ),
+    child: Image.asset("assets/Icon_Devices.png"),
   );
 }
