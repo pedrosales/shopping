@@ -24,9 +24,21 @@ class HomePage extends StatelessWidget {
         title: Text("Meu App"),
       ),
       body: Container(
-        color: Colors.blue,
-        child: Center(
-          child: Text("Hello World"),
+        width: double.infinity,
+        color: Colors.red,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Container(
+              color: Colors.yellow,
+              child: Text("item 1"),
+            ),
+            Text("item 2"),
+            Text("item 3"),
+            Text("item 4"),
+            Text("item 5"),
+          ],
         ),
       ),
     );
