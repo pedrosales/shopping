@@ -25,10 +25,11 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         width: double.infinity,
+        height: double.infinity,
         color: Colors.red,
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
               color: Colors.yellow,
@@ -37,7 +38,13 @@ class HomePage extends StatelessWidget {
             Text("item 2"),
             Text("item 3"),
             Text("item 4"),
-            Text("item 5"),
+            Column(
+              children: <Widget>[
+                Text("C1"),
+                Text("C2"),
+                Text("C3"),
+              ],
+            ),
           ],
         ),
       ),
