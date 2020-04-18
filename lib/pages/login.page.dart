@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/pages/home.page.dart';
 import 'package:shopping/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -118,7 +119,12 @@ class LoginPage extends StatelessWidget {
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                          },
                           child: Text("SignIn",
                               style: TextStyle(color: Colors.white)),
                         ),
