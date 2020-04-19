@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping/widgets/animated-input.widget.dart';
 
 class SearchBox extends StatefulWidget {
   @override
@@ -32,7 +33,7 @@ class _SearchBoxState extends State<SearchBox>
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Text("Search"),
+        AnimatedInput(controller: _controller),
         FlatButton(
           onPressed: () {
             !menuOpened ? _controller.forward() : _controller.reverse();
