@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/pages/product.page.dart';
+import 'package:shopping/widgets/category/category-list.widget.dart';
+import 'package:shopping/widgets/product/product-card.widget.dart';
 import 'package:shopping/widgets/search-box.widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,7 +31,7 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               height: 90,
-              child: categoryList(),
+              child: CategoryList(),
             ),
             SizedBox(
               height: 30,
@@ -61,116 +63,26 @@ class HomePage extends StatelessWidget {
   }
 }
 
-Widget categoryList() {
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.horizontal,
-      children: <Widget>[
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-      ],
-    ),
-  );
-}
-
-Widget categoryItem() {
-  return Container(
-    width: 70,
-    height: 70,
-    margin: EdgeInsets.all(10),
-    padding: EdgeInsets.all(10),
-    decoration: BoxDecoration(
-      color: Colors.white,
-      boxShadow: [
-        new BoxShadow(
-          color: Colors.black12,
-          offset: new Offset(1, 1),
-          blurRadius: 5,
-          spreadRadius: 2,
-        ),
-      ],
-      borderRadius: BorderRadius.all(
-        Radius.circular(64),
-      ),
-    ),
-    child: Image.asset("assets/Icon_Devices.png"),
-  );
-}
-
 Widget productList(BuildContext context) {
   return Container(
     child: ListView(
       scrollDirection: Axis.horizontal,
       children: <Widget>[
-        productItem(context),
-        productItem(context),
-        productItem(context),
-        productItem(context),
-        productItem(context),
-      ],
-    ),
-  );
-}
-
-Widget productItem(BuildContext context) {
-  return Container(
-    padding: EdgeInsets.all(10),
-    margin: EdgeInsets.all(5),
-    width: 170,
-    color: Colors.black12,
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ProductPage(),
-              ),
-            );
-          },
-          child: Image.asset(
-            "assets/product-1.png",
-            width: 170,
-            height: 170,
-            fit: BoxFit.cover,
-          ),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Container(
-          height: 30,
-          child: Text(
-            "Produto",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w300,
-            ),
-          ),
-        ),
-        Text(
-          "Marca",
-          style: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.w300,
-          ),
-        ),
-        Text(
-          "\$ 200",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF00C569),
-          ),
-        ),
+        ProductCard(
+            image: "assets/product-10.png",
+            title: "Nike Dry_Fit Long Sleeve",
+            desciption: "Nike",
+            price: 150),
+        ProductCard(
+            image: "assets/product-1.png",
+            title: "BeoPlay Speaker",
+            desciption: "Bang out fusen",
+            price: 755),
+        ProductCard(
+            image: "assets/product-2.png",
+            title: "Leather Wristwatch",
+            desciption: "Tag Heuer",
+            price: 450),
       ],
     ),
   );
