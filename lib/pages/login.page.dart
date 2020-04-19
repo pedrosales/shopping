@@ -119,12 +119,7 @@ class LoginPage extends StatelessWidget {
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: FlatButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => HomePage()));
-                          },
+                          onPressed: () {},
                           child: Text("SignIn",
                               style: TextStyle(color: Colors.white)),
                         ),
