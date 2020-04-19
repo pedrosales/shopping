@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/pages/product.page.dart';
 import 'package:shopping/widgets/category/category-list.widget.dart';
-import 'package:shopping/widgets/product/product-card.widget.dart';
+import 'package:shopping/widgets/product/product-list.widget.dart';
 import 'package:shopping/widgets/search-box.widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,36 +53,13 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               height: 280,
-              child: productList(context),
+              child: ProductList(
+                scrollDirection: Axis.horizontal,
+              ),
             ),
           ],
         ),
       ),
     );
   }
-}
-
-Widget productList(BuildContext context) {
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.horizontal,
-      children: <Widget>[
-        ProductCard(
-            image: "assets/product-10.png",
-            title: "Nike Dry_Fit Long Sleeve",
-            desciption: "Nike",
-            price: 150),
-        ProductCard(
-            image: "assets/product-1.png",
-            title: "BeoPlay Speaker",
-            desciption: "Bang out fusen",
-            price: 755),
-        ProductCard(
-            image: "assets/product-2.png",
-            title: "Leather Wristwatch",
-            desciption: "Tag Heuer",
-            price: 450),
-      ],
-    ),
-  );
 }
