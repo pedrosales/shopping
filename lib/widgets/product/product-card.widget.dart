@@ -47,7 +47,7 @@ class ProductCard extends StatelessWidget {
             height: 10,
           ),
           Container(
-            height: 30,
+            height: 40,
             child: Text(
               title,
               style: TextStyle(
@@ -56,11 +56,17 @@ class ProductCard extends StatelessWidget {
               ),
             ),
           ),
-          Text(
-            desciption,
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w300,
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 20,
+            child: Text(
+              desciption,
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w300,
+              ),
             ),
           ),
           Text(

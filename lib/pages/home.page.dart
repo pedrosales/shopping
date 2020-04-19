@@ -13,27 +13,26 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 60,
+              height: 30,
             ),
             SearchBox(),
             SizedBox(
-              height: 30,
-            ),
-            Text(
-              "Categories",
-              style: TextStyle(
-                fontSize: 30,
-              ),
+              height: 10,
             ),
             SizedBox(
               height: 10,
             ),
+            Column(
+              children: <Widget>[
+                Text(
+                  "Categories",
+                  style: Theme.of(context).textTheme.headline,
+                ),
+              ],
+            ),
             Container(
               height: 90,
               child: CategoryList(),
-            ),
-            SizedBox(
-              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -52,7 +51,7 @@ class HomePage extends StatelessWidget {
               height: 10,
             ),
             Container(
-              height: 280,
+              height: 350,
               child: ProductList(
                 scrollDirection: Axis.horizontal,
               ),

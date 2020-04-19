@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/pages/home.page.dart';
 import 'package:shopping/pages/signup.page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -89,7 +88,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: "Password",
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Colors.black,
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),

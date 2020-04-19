@@ -31,7 +31,7 @@ class SearchBox extends StatelessWidget {
               ),
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.blue,
+                color: Theme.of(context).primaryColor,
               ),
             ),
           ),
